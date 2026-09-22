@@ -1,4 +1,8 @@
+import calculatorPattern
+
 print("This is py calculator")
+
+calculatorPattern.dinoPattern()
 
 test = input("You want to calculate? type 'yes' or 'no' ")
 
@@ -16,6 +20,7 @@ while (isGame):
     "Type '4' for Division\n"
     "Type 'stop' to exit")
 
+    print()
     type = input("Please enter your input here ")
     print()
 
@@ -23,22 +28,34 @@ while (isGame):
         # start adding logic
         a = int(input("Enter your first number to 'Add' "))
         b = int(input("Enter your second number to 'Add' "))
-        print(a + b)
+        print()
+        print(f"Answer = {a + b}")
+        print()
+        print("*" *100)
         gameCount += 1
     elif type == "2":
         a = int(input("Enter your first number to 'Subtract' "))
         b = int(input("Enter your second number to 'Subtract' "))
-        print(a - b)
+        print()
+        print(f"Answer = {a - b}")
+        print()
+        print("*" *100)
         gameCount += 1
     elif type == "3":
         a = int(input("Enter your first number to 'Multiply' "))
         b = int(input("Enter your second number to 'Multiply' "))
-        print(a * b)
+        print()
+        print(f"Answer = {a * b}")
+        print()
+        print("*" *100)
         gameCount += 1
     elif type == "4":
         a = int(input("Enter your first number to 'Divide' "))
         b = int(input("Enter your second number to 'Divide' "))
-        print(a / b)
+        print()
+        print(f"Answer = {a / b}")
+        print()
+        print("*" *100)
         gameCount += 1
     elif type == "stop":
         # isGame is false
