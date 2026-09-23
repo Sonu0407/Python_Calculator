@@ -23,6 +23,7 @@ while (isGame):
     "Type '4' for Division\n"
     "Type '5' for Modulo\n"
     "Type '6' for Salary_Calculator\n"
+    "Type '7' for Average_Calculator\n"
     "Type 'stop' to exit")
 
     print()
@@ -76,6 +77,14 @@ while (isGame):
         words = num2words(monthly)
         print()
         print(f"Your monthly salary = {round(salary / 12)} ({words} Only)")
+        print()
+        print("*" *100)
+        gameCount += 1
+    elif type == "7":
+        nums = list(map(int, input("Enter at least two numbers ").split())) #TODO cover the edge cases tomorrow and make it stable to handle anything wrong input.
+        average = sum(nums) / len(nums)
+        print()
+        print("Average:", average)
         print()
         print("*" *100)
         gameCount += 1
