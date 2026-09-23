@@ -1,4 +1,5 @@
 import calculatorPattern
+from num2words import num2words
 
 print("This is py calculator")
 
@@ -21,6 +22,7 @@ while (isGame):
     "Type '3' for Multiplication\n"
     "Type '4' for Division\n"
     "Type '5' for Modulo\n"
+    "Type '6' for Salary_Calculator\n"
     "Type 'stop' to exit")
 
     print()
@@ -65,6 +67,15 @@ while (isGame):
         b = int(input("Enter your second number to 'Modulo' "))
         print()
         print(f"Answer = {a % b}")
+        print()
+        print("*" *100)
+        gameCount += 1
+    elif type == "6":
+        salary = int(input("Enter your ctc "))
+        monthly = round(salary / 12)
+        words = num2words(monthly)
+        print()
+        print(f"Your monthly salary = {round(salary / 12)} ({words} Only)")
         print()
         print("*" *100)
         gameCount += 1
