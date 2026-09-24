@@ -27,10 +27,10 @@ while (isGame):
     "Type 'stop' to exit")
 
     print()
-    type = input("Please enter your input here ")
+    key = input("Please enter your input here ")
     print()
 
-    if type == "1":
+    if key == "1":
         # start adding logic
         a = int(input("Enter your first number to 'Add' "))
         b = int(input("Enter your second number to 'Add' "))
@@ -39,7 +39,7 @@ while (isGame):
         print()
         print("*" *100)
         gameCount += 1
-    elif type == "2":
+    elif key == "2":
         a = int(input("Enter your first number to 'Subtract' "))
         b = int(input("Enter your second number to 'Subtract' "))
         print()
@@ -47,7 +47,7 @@ while (isGame):
         print()
         print("*" *100)
         gameCount += 1
-    elif type == "3":
+    elif key == "3":
         a = int(input("Enter your first number to 'Multiply' "))
         b = int(input("Enter your second number to 'Multiply' "))
         print()
@@ -63,7 +63,7 @@ while (isGame):
         print()
         print("*" *100)
         gameCount += 1
-    elif type == "5":
+    elif key == "5":
         a = int(input("Enter your first number to 'Modulo' "))
         b = int(input("Enter your second number to 'Modulo' "))
         print()
@@ -71,8 +71,8 @@ while (isGame):
         print()
         print("*" *100)
         gameCount += 1
-    elif type == "6":
-        salary = int(input("Enter your ctc "))
+    elif key == "6":
+        salary = int(input("Enter your ctc to 'Salary_Calculator' "))
         monthly = round(salary / 12)
         words = num2words(monthly)
         print()
@@ -80,15 +80,20 @@ while (isGame):
         print()
         print("*" *100)
         gameCount += 1
-    elif type == "7":
-        nums = list(map(int, input("Enter at least two numbers ").split())) #TODO cover the edge cases tomorrow and make it stable to handle anything wrong input.
-        average = sum(nums) / len(nums)
-        print()
-        print("Average:", average)
-        print()
-        print("*" *100)
-        gameCount += 1
-    elif type == "stop":
+    elif key == "7":
+        nums = list(map(int, input("Enter at least two numbers to 'Average_Calculator' ").split())) #TODO cover the edge cases tomorrow and make it stable to handle anything wrong input.
+        if len(nums) < 2:
+            print()
+            print("[Error] Please enter at least two numbers to perform average calculation")
+            isGame = False
+        else:
+            average = sum(nums) / len(nums)
+            print()
+            print("Average:", average)
+            print()
+            print("*" *100)
+            gameCount += 1
+    elif key == "stop":
         # isGame is false
         isGame = False
         
