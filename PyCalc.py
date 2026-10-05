@@ -81,7 +81,7 @@ while (isGame):
         print("*" *100)
         gameCount += 1
     elif key == "7":
-        nums = list(map(int, input("Enter at least two numbers to 'Average_Calculator' ").split())) #TODO cover the edge cases tomorrow and make it stable to handle anything wrong input.
+        nums = list(map(int, input("Enter at least two numbers to 'Average_Calculator' ").split()))
         if len(nums) < 2:
             print()
             print("[Error] Please enter at least two numbers to perform average calculation")
