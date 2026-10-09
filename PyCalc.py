@@ -12,7 +12,7 @@ test = input("You want to calculate? type 'yes' or 'no' ")
 isGame = True if test == "yes" else False
 
 gameCount = 0
-
+# Game Loop
 while (isGame):
     # Task 1 Implement adding in the calculator
     print()
